@@ -1,4 +1,4 @@
-[2;2R[2;2Rstdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
