@@ -1,5 +1,3 @@
-
-#include <string.h>
 #include <stdio.h>
 /**
  * main - Entry point
@@ -8,6 +6,7 @@
  */
 int main(void)
 {
-printf("%s\n", "with proper grammar, but the outcome is a piece of art");
+char mes[55] = "with proper grammar, but the outcome is a piece of art,";
+printf("%s\n", mes);
 return (0);
 }
