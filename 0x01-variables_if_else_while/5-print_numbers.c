@@ -1,25 +1,17 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-if(n > 5)
+int n;
+for (n = 0; n < 10; n++)
 {
-printf("%d","and is greater than 5");
+putchar(n);
 }
-else(n == 0)
-{
-printf("and is 0");
-}
-if(){
-printf("and is less than 6 and not 0");
-}
-
 return (0);
 }

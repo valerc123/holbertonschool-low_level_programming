@@ -1,4 +1,4 @@
-#include <stdlib.h>
+:wq:wqde <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 /**
