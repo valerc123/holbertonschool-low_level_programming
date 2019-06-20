@@ -16,7 +16,8 @@ if (n == 57)
 {
 continue;
 }
-else {
+else
+{
 putchar(44);
 putchar(32);
 }
