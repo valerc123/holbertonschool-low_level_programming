@@ -8,13 +8,14 @@
  */
 int main(void)
 {
-int n, j;
+int n;
+int j;
 for (n = 48; n < 58; n++)
 {
 for (j = 48; j < 58; j++)
 {
 putchar(n);
-putchar(j)
+putchar(j);
 if (n == 57 && j == 57)
 {
 continue;
