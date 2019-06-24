@@ -1,29 +1,37 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
 /**
- * main - Entry point
+ * main - Entry Point
+ *
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n;
 int j;
-
-for (n = 48; n <= 57; n++)
+int i;
+for (j = 48; j <= 56; j++)
 {
-j = n;
-while(j < 57)
+for (i = 48; i <= 57; i++)
 {
-j++;
-putchar(n);
-putchar(j);
-if ((j == 56) && (n == 57)) {
-break;
+if (j == i || j > i)
+{
+continue;
 }
-putchar(',');
-putchar(' ');
+else
+{
+putchar (j);
+putchar (i);
+}
+if (j == 56 && i == 57)
+{
+}
+else
+{
+putchar (',');
+putchar (' ');
+}
 }
 }
 putchar('\n');
