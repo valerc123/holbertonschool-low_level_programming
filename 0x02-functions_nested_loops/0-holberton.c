@@ -1,4 +1,10 @@
 #include "holberton.h"
+/**
+ * main - This function prints HOLBERTON
+ * 
+ * Description:  A column of asterisks on the left side,
+ * with beginning and ending almost-blank lines.
+ */
 int main(void)
 {
 int i;
