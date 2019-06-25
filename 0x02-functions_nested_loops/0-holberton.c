@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - This function prints HOLBERTON
- * 
- * Description:  A column of asterisks on the left side,
- * with beginning and ending almost-blank lines.
+ * main - Prints 'HOLBERTON'
+ *
+ * Description: This function prints 'HOLBERTON'
+ * Return: void
  */
 int main(void)
 {
