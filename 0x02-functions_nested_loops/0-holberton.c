@@ -8,10 +8,11 @@
 int main(void)
 {
 int i;
-char holberton[9] = {'H', 'O', 'L', 'B', 'E', 'R', 'T', 'O', 'N'};
+char holberton[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
 for (i = 0; i < sizeof(holberton); i++)
 {
 putchar(holberton[i]);
 }
+putchar('\n');
 return (0);
 }
