@@ -9,6 +9,7 @@ int main(void)
 {
 	unsigned int i;
 	char holberton[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+
 	for (i = 0; i < sizeof(holberton); i++)
 	{
 		_putchar(holberton[i]);
