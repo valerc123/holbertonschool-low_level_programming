@@ -1,21 +1,41 @@
-  for (; n < 98; n++)
-    {
-        if (n < 0)
-        {
-            n = n * -1;
-        }
-        putchar(n);
-        putchar(',');
-        putchar(' ');
+#include "holberton.h"
+#include <stdio.h>
 
-    }  for (; n < 98; n++)
-    {
-        if (n < 0)
-        {
-            n = n * -1;
-        }
-        putchar(n);
-        putchar(',');
-        putchar(' ');
+/**
+ * print_to_98 - this function prints all natural numbers from n to 98
+ * @n: The character input
+ *
+ * Return: On success 1.
+ * .
+ */
 
-    }
+void print_to_98(int n)
+{
+	int i;
+
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	printf("\n");
+}
