@@ -3,7 +3,7 @@
  * _isupper - This function checks whetever uppercase character.
  * @c: character to checked
  *
- * Return: the sum of the two operands
+ * Return: 1 if c is uppercase, otherwise Returns: 0
  */
 
 int _isupper(int c)
