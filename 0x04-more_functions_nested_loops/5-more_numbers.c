@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * more_numbers - This function prints 10 times the numbers, from 0 to 14
  * Return: void
@@ -12,7 +11,7 @@ void more_numbers(void)
 	{
 		for (j = 0; j <= 14; j++)
 		{
-			if (j > 9) 
+			if (j > 9)
 			{
 				a = j / 10;
 				b = j % 10;
