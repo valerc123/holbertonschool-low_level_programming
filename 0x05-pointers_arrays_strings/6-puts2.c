@@ -2,7 +2,7 @@
 
 /**
  * puts2 - This function prints one char out of 2 of a string.
- * @str: The string to print 
+ * @str: The string to print
  * Return: void
  */
 
