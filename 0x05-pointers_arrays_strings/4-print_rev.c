@@ -1,7 +1,23 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_rev - This function prints a string in reverse, followed by a new line
+ * @s: The string to print out to stdout
+ * Return: void
  */
+
+void print_rev(char *s)
+{
+	int i = 0, j = 0;
+
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	while (j <= i)
+	{
+		_putchar(*(s + i));
+		i--;
+	}
+	_putchar('\n');
+}
