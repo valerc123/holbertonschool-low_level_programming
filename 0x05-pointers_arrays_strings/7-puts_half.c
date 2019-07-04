@@ -12,19 +12,18 @@ void puts_half(char *str)
 	while (str[i] != '\0')
 	{
 		i++;
+	}
+	
+	n = i / 2;
+
+	if(i % 2 == 0)
+	{
 		n++;
-	}
-	if (n % 2 == 0)
-	{
-		j = n / 2;
-	}
-	else
-	{
-		j = (n + 1) / 2;
-	}
-	for (i = j; i < n; i++)
-	{
-		_putchar(str[i]);
+
+		for (j = n; j < i; j++)
+		{
+			_putchar(str[j]);
+		}
 	}
 	_putchar('\n');
 }
