@@ -1,34 +1,27 @@
 #include "holberton.h"
+
 /**
- * *leet - encodes string 1337
- * @n: string to encode
- * Return: pointer to an array
-*/
+ * *leet - a function that encodes a string into 1337.
+ * @s: pointer to 1st char of string to be reverse.
+ * Return: char.
+ */
+
 char *leet(char *n)
 {
-	int i;
+	char s1[5] = {'A', 'E', 'O', 'T', 'L'};
+	char s2[5] = {'a', 'e', 'o', 't', 'l'};
+	char s3[5] = {'4', '3', '0', '7', '1'};
 
+	int i, j;
+	
 	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (n[i] == 'a' || n[i] == 'A')
+		for (j = 0; j <= 4; j++)
 		{
-			n[i] = '4';
-		}
-		else if (n[i] == 'e' || n[i] == 'E')
-		{
-			n[i] = '3';
-		}
-		else if (n[i] == 'o' || n[i] == 'O')
-		{
-			n[i] = '0';
-		}
-		else if (n[i] == 't' || n[i] == 'T')
-		{
-			n[i] = '7';
-		}
-		else if (n[i] == 'l' || n[i] == 'L')
-		{
-			n[i] = '1';
+			if (n[i] == s1[j] || n[i] == s2[j])
+			{
+				n[i] = s3[j];
+			}
 		}
 	}
 	return (n);
