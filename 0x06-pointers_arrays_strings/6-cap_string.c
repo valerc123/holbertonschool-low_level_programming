@@ -2,7 +2,7 @@
 
 /**
  * *cap_string - This function capitalizes all words of a string.
- * @s: string to be capitalize 
+ * @s: string to be capitalize
  * Return: String in uppercase
 */
 char *cap_string(char *n)
@@ -11,12 +11,16 @@ char *cap_string(char *n)
 
 	while (n[i] != '\0')
 	{
-		if (n[i] == ',' || n[i] == ';' || n[i] == '.' || n[i] == '!' || n[i] == '?' || n[i] == '"' || n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}' || n[i] == ' ' || n[i] == '\n' || n[i] == '\t')
+		if (n[i] == ',' || n[i] == ';' || n[i] == '.'
+		 || n[i] == '!' || n[i] == '?' || n[i] == '"'
+		 || n[i] == '(' || n[i] == ')' || n[i] == '{'
+		 || n[i] == '}' || n[i] == ' ' || n[i] == '\n'
+		 || n[i] == '\t')
 		{
 			k = 1;
 		}
-
-  else if (n[i] >= 'a' && n[i] <= 'z' && k == 1 || n[0] >= 'a' && n[0] <= 'z')
+		else if ((n[i] >= 'a' && n[i] <= 'z' && k == 1)
+		 || (n[0] >= 'a' && n[0] <= 'z'))
 		{
 			n[i] -= 32;
 			k = 0;
@@ -27,5 +31,5 @@ char *cap_string(char *n)
 		}
 		i++;
 	}
-	return (n);	
+	return (n);
 }
