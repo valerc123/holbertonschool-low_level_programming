@@ -15,7 +15,8 @@ char *cap_string(char *n)
 		{
 			k = 1;
 		}
-		else if (n[i] >= 'a' && n[i] <= 'z' && k == 1)
+
+  else if (n[i] >= 'a' && n[i] <= 'z' && k == 1 || n[0] >= 'a' && n[0] <= 'z')
 		{
 			n[i] -= 32;
 			k = 0;
