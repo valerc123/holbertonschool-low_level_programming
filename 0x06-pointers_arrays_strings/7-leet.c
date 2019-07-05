@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * lett - encodes string 1337
+ * *leet - encodes string 1337
  * @n: string to encode
  * Return: pointer to an array
 */
@@ -30,6 +30,6 @@ char *leet(char *n)
 		{
 			n[i] = '1';
 		}
-	} 
+	}
 	return (n);
 }
