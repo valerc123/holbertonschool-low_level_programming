@@ -1,20 +1,19 @@
 #include "holberton.h"
 /**
- * _memset - fills n bytes of memory area s with constant byte b
- * @s: buffer to write on
- * @b: char to verwrite buffer
- * @n: n bytes of memory to overwrite
- * Description: n bytes of memory area s with constant byte b
- * Return: pointer s to a buffer
+ * _memcpy - copies n bytes from memory area src to memory area dest
+ * @dest: pointer destination buffer to wrote on
+ * @src: pointer to the source buffer to write to dest
+ * @n: number of bytes to copy from n
+ * Description: copies n bytes from memory src to memory area dest
+ * Return: pointer to dest buffer
  */
- 
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
-		s[i] = b;
+		dest[i] = src[i];
 	}
-	return (s);
+	return (dest);
 }
