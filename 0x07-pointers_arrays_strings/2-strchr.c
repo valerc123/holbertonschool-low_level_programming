@@ -7,16 +7,15 @@
  * Description: Returns pointer to first character c in string s
  * Return: pointer s or NULL
  */
-char *_strchr(char *s, char c)
-{
+unsigned int _strspn(char *s, char *accept)
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
         	if (s[i] == c)
         	{
-            		break;
+           		return (&s[i];
         	}
 	}
-	return (s+i);
+	return ('\0');
 }
