@@ -7,7 +7,6 @@
  * Description: n bytes of memory area s with constant byte b
  * Return: pointer s to a buffer
  */
- 
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
