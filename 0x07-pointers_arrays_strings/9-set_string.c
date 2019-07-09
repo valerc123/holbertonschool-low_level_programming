@@ -1,6 +1,7 @@
 #include "holberton.h"
 
-/**set_string - set `s' to point to `to'
+/**
+ * set_string - set `s' to point to `to'
  * @s: double pointer to set to `to'
  * @to: pointer to string
  */
