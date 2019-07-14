@@ -2,12 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main- prints its name
+ * main - prints its name
  * @argc: number of things in the command line
  * @argv: array of string values
  * Return: 0
 */
-int main (int argc, char* argv[])
+
+int main(int argc, char **argv)
 {
 	int i;
 
@@ -16,4 +17,4 @@ int main (int argc, char* argv[])
 		printf("%s\n", argv[i]);
 	}
 	return (0);
-}	
+}
