@@ -2,11 +2,11 @@
 #include <stdlib.h>
 /**
  * main - prints the minimum number of coins to make change
- *
  * @argc: number of arguments in the command line
  * @argv: array of string values
  * Return: 0
 */
+
 int main(int argc, char *argv[])
 {
 	int count = 0, cents;
