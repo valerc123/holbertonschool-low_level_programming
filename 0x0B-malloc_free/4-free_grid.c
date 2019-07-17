@@ -1,7 +1,11 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *
- *
+ * free_ grid - This function frees a 2 dimensional grid
+ * @grid: double pointer of integers
+ * @height: height of the grid
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
@@ -9,6 +13,7 @@ void free_grid(int **grid, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = free(grid);
+		free(grid[i]);
 	}
+	free(grid);
 }
