@@ -23,6 +23,7 @@ char *argstostr(int ac, char **av)
 		{
 			count++;
 		}
+		count++;
 	}
 	count += 1;
 	aux = malloc(sizeof(char) * count);
