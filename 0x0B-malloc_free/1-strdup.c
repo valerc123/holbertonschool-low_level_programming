@@ -27,7 +27,7 @@ char *_strdup(char *str)
 	unsigned int i, length = 0;
 	char *newArray;
 
-	if (str == '\0')
+	if (str == NULL)
 	{
 		return (0);
 	}
