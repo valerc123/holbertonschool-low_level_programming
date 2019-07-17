@@ -24,7 +24,7 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-	unsigned int i, length;
+	unsigned int i, length = 0;
 	char *newArray;
 
 	length = _strlen(str);
