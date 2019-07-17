@@ -27,11 +27,11 @@ char *_strdup(char *str)
 	unsigned int i, length = 0;
 	char *newArray;
 
-	length = _strlen(str);
 	if (str == '\0')
 	{
 		return (0);
 	}
+	length = _strlen(str);
 	newArray = malloc(sizeof(char) * length);
 	if (newArray == NULL)
 	{
