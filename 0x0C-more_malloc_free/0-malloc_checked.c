@@ -3,15 +3,15 @@
 #include <stdlib.h>
 /**
  * malloc_checked - This function allocates memory using malloc
- * @b : integer
+ * @b : integer given
  * Return: pointer to the allocated memory
 */
 
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	char *p;
 
-	p = (int *) malloc(sizeof(int) * b);
+	p =  malloc(sizeof(char) * b);
 	if (p == NULL)
 	{
 		exit(98);
