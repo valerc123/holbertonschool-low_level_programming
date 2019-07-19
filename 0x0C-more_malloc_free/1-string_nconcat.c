@@ -21,8 +21,8 @@ int _strlen(char *s)
  * string_nconcat - This function concatenates two strings
  * @s1: string one
  * @s2: string two
- * n: number of bytes given
- * Return: pointer 
+ * @n: number of bytes given
+ * Return: pointer
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -42,15 +42,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	else
-	{	
+	{
 		for (k = 0; s1[k] != '\0'; k++)
 		{
 			concat[k] = s1[k];
-		}		
+		}
 		for (l = 0; s2[l] != '\0'; l++)
 		{
 			concat[k + l] = s2[l];
-		}	
+		}
 	}
 	concat[k + l] = '\0';
 	return (concat);
