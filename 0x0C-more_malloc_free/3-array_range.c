@@ -4,6 +4,10 @@
 #include <string.h>
 
 /**
+* array_range -This function creates an array of integers
+* @min: minimum number of elements of array
+* @max: maximum number of elements of array
+* Return: pointer
 */
 int *array_range(int min, int max)
 {
@@ -12,7 +16,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	p = malloc(sizeof(int) * (max - min + 1));
-	if(p == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
@@ -21,8 +25,8 @@ int *array_range(int min, int max)
 		for (i = 0; min <= max; i++)
 		{
 			p[i] = min;
-			min++; 
+			min++;
 		}
 	}
-	return(p);
-}	
+	return (p);
+}
