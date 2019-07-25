@@ -1,4 +1,4 @@
-#include "3-calc.h"
+#include <stdlib.h>
 #include <stdio.h>
 /**
  * op_add - This function returns the sum of a and b
@@ -44,9 +44,12 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	int result = a / b;
-
-	return (result);
+	if(b)
+	{
+		return (a / b);
+	}
+	printf("Error\n");
+	exit(100);
 }
 /**
  * op_mod - This function returns the remaider of the division of a by b
@@ -56,7 +59,10 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	int result = a % b;
-
-	return (result);
+	if (b)
+	{
+		return (a % b);
+	}
+	printf("Error\n");
+	exit(100);
 }
