@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - selects correct function to perform operation
  * @s: operator passed as argument
@@ -28,6 +28,7 @@ int (*get_op_func(char *s))(int, int)
 		}
 		i++;
 	}
-	return (NULL);
+	printf("Error\n");
+	exit (99);
 }
 
