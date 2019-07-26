@@ -3,11 +3,14 @@
 #include <stdarg.h>
 
 /**
+ * sum_them_all - This function returns the sum of all arguments
+ * @n: number of arguments
+ * Return: sum of the arguments.
  */
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
-	int sum;
+	int sum = 0;
 	va_list list_arg;
 
 	if (n == 0)
