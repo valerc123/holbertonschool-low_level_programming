@@ -4,6 +4,7 @@
 /**
  * print_strings - This function prints strings.
  * @n: number of strings passed to the function.
+ * @separator: char that separate between the characters of a string
  * Return: void.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
