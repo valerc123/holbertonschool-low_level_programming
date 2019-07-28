@@ -10,6 +10,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	va_list list_all;
 	int i = 0;
+
 	va_start(list_all, format);
 	while (format == NULL)
 	{
@@ -24,7 +25,7 @@ void print_all(const char * const format, ...)
 			printf("%c", va_arg(list_all, int));
 			break;
 			case 'i':
-			printf("%i", va_arg(list_all, int));
+			printf("%d", va_arg(list_all, int));
 			break;
 			case 'f':
 			printf("%f", va_arg(list_all, double));
@@ -41,10 +42,9 @@ void print_all(const char * const format, ...)
 		}
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
 		 format[i] == 's') && (format[i + 1] != '\0'))
-		{
 			printf(", ");
-			va_end(list_all);
-		}
 		i++;
 	}
+	printf("\n");
+	va_end(list_all);
 }
