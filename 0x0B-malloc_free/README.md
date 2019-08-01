@@ -1,1 +1,1 @@
-C - malloc, freeC - malloc, free
+C - malloc, free.
