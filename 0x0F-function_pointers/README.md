@@ -1,1 +1,1 @@
- Function pointers Function pointers
+C - Function pointers.
