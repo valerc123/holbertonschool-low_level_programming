@@ -10,7 +10,7 @@ void free_list(list_t *head)
 
 	if (!head)
 	{
-		free(head);
+		return;
 	}
 	else
 	{
@@ -19,4 +19,5 @@ void free_list(list_t *head)
 		free(iterator->str);
 		free(iterator);
 	}
+	return;
 }
