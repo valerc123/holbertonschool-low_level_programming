@@ -6,5 +6,18 @@
 */
 void free_list(list_t *head)
 {
-	
+	list_t *iterator;
+
+	if (!head)
+		return;
+	iterator = head;
+	if (!iterator)
+	{
+		return;
+	}
+	while (iterator->next)
+	{
+		iterator = iterator->next;
+		free(iterator);
+	}
 }
