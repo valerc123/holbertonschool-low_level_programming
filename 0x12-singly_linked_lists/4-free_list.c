@@ -10,7 +10,7 @@ void free_list(list_t *head)
 
 	if (!head)
 	{
-		return;
+		free(head);
 	}
 	else
 	{
