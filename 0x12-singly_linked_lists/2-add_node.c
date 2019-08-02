@@ -36,9 +36,11 @@ list_t *add_node(list_t **head, const char *str)
 
 	/*put in the data and copy*/
 	new_node->str = strdup(str);
-	/**/
+	/*gets length of element*/
 	new_node->len = _strlen(str);
+	/*make next of new_node as head*/
 	new_node->next = *head;
+	/* move the head to point to the new node*/
 	*head = new_node;
 	return (new_node);
 }
