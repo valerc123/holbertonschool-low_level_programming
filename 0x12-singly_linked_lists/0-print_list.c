@@ -4,7 +4,7 @@
  * print_list - print the length and string of the list
  * @h: List
  *
- * Return: the number of elemnts.
+ * Return: the number of elements.
  */
 
 size_t print_list(const list_t *h)
@@ -12,7 +12,6 @@ size_t print_list(const list_t *h)
 	int length;
 
 	length = 0; /*The numbers of nodes*/
-	
 	while (h)
 	{
 		if (h->str == NULL)
