@@ -9,15 +9,14 @@ void free_list(list_t *head)
 	list_t *iterator;
 
 	if (!head)
-		return;
-	iterator = head;
-	if (!iterator)
 	{
 		return;
 	}
-	while (iterator->next)
+	else
 	{
-		iterator = iterator->next;
+		iterator = head;
+		head = head->next;
+		free(iterator->str);
 		free(iterator);
 	}
 }
