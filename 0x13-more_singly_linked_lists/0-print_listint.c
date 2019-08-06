@@ -9,7 +9,7 @@ size_t print_listint(const listint_t *h)
 	int elements;
 
 	elements = 0;
-	if (h)
+	while (h)
 	{
 		if (h == NULL)
 		{
@@ -22,10 +22,6 @@ size_t print_listint(const listint_t *h)
 			elements++;
 		}
 		h = h->next; /* The pointer points to the next node*/
-	}
-	else
-	{
-		return (0);
 	}
 	return (elements);
 }
