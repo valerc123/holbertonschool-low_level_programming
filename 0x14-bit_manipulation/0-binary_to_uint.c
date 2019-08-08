@@ -7,27 +7,22 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, pow = 0;
-	unsigned int num = 0;
+	int base = 2, i = 0;
+	unsigned int res = 0;
+	int num = 0;
 
 	if (!b)
 		return (0);
-	pow = 1;
 
-	while (b[i + 1] != '\0')
-	{
-		i++;
-	}
-
-	while (i >= 0)
+	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '1' && b[i] != '0')
-		{
 			return (0);
-		}
-		num += (b[i] - '0') * pow;
-		pow *= 2;
-		i--;
+		if (b[i] == '1')
+			num = 1;
+		else
+			num = 0;
+		res = res * base + num;
 	}
-	return (num);
+	return (res);
 }
