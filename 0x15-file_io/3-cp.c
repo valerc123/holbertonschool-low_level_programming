@@ -21,21 +21,22 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	size_from = read(file_from, buf, 1024);
-	while ((size_from = read(file_from, buf, 1024)) != 0)
-	{	/*checks for -1 or non 0 number */
-		if (size_from == -1)
-		{	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
-		size_to = write(file_to, buf, size_from);
-
-		if (size_to == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+	if (size_from == -1)
+	{	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
-/* close file */
+	size_to = write(file_to, buf, size_from);
+	if (size_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	while (size_from == 1024)
+	{
+		size_from = read(file_from, buf, 1024);
+		size_to = write(file_to, buf, size_from);
+	}
+	/* close file */
 	close_file = close(file_from);
 	if (close_file == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
