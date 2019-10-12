@@ -13,30 +13,33 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int index = 0;
-	hash_node_t *node;
+	hash_node_t *node, *tmp;
 
-	if (!ht || !key || !value)
+	if (!ht || !ht->array || ht->size == 0 || !key || strlen(key) == 0 || !value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
+	tmp = ht->array[index];
+	if (tmp != NULL && strcmp(tmp->key, key) == 0)
 	{
-		free(ht->array[index]->value);
-		ht->array[index]->value = strdup(value);
+		free(tmp->value);
+		tmp->value = strdup(value);
 		return (1);
 	}
 
 	node = create_node(key, value);
+	if (!node)
+		return (0);
 	node->next = ht->array[index];
 	ht->array[index] = node;
-	return (1);	
+	return (1);
 }
 
 /**
-* create_node: creates a new node of hash_node_t type
-* @key: key
-* @value: value
-* Return: new node created
+* create_node - Creates a new node of hash_node_t type
+* @key: key for the node
+* @value: value for the node
+* Return: new node created, or NULL on failure
 */
 hash_node_t *create_node(const char *key, const char *value)
 {
@@ -50,5 +53,10 @@ hash_node_t *create_node(const char *key, const char *value)
 	new_node->value = strdup(value);
 	new_node->next = NULL;
 
+	if (!new_node->key || !new_node->value)
+	{
+		free(new_node);
+		return (NULL);
+	}
 	return (new_node);
 }
