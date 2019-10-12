@@ -1,3 +1,10 @@
+#include "hash_tables.h"
+/**
+ * hash_djb2 - function to compute hash of `str` using djb2 algorithm.
+ * @str: string to hash
+ *
+ * Return: value of 64 bit hash
+ */
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
