@@ -17,6 +17,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!new_ht->array)
 	{
 		free(new_ht);
+		free(new_ht->array);
 		return (NULL);
 	}
 	while (size--)
