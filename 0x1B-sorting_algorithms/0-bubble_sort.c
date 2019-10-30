@@ -9,10 +9,11 @@ void bubble_sort(int *array, size_t size)
 {
 	unsigned int i, k;
 	int tmp = 0;
-	int var1, var2;
+	int ordered, var1, var2;
 
 	for (k = 0; k < size; k++)
 	{
+		ordered = 0;
 		for (i = 0; i < (size - 1); i++)
 		{
 			var1 = array[i];
@@ -23,7 +24,10 @@ void bubble_sort(int *array, size_t size)
 				array[i] = var2;
 				array[i + 1] = tmp;
 				print_array(array, size);
+				ordered = 1;
 			}
 		}
+		if (!ordered)
+			break;
 	}
 }
