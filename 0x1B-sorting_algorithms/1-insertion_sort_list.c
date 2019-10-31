@@ -6,6 +6,7 @@
  *
  * @list: pointer to pointer with the address of first node
  */
+
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *tmp = NULL, *current = NULL, *prev = NULL;
