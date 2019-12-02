@@ -1,4 +1,9 @@
 CC = gcc
+<<<<<<< HEAD
 SRC = holberton.c main.c
+=======
+SRC = main.c holberton.c
+
+>>>>>>> 9e39008d23ace3c938ab7ee3be4b36fdadc72bc1
 all:
 	$(CC) $(SRC) -o holberton
