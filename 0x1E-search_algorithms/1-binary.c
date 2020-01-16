@@ -10,16 +10,17 @@
 
 void print_subarray(int *array, int left, int right)
 {
-		int i;
-		printf("Searching in array: ");
-		for (i = left; i <= right; i++)
-		{
-				printf("%i", array[i]);
-				if (i == right)
-						putchar(10);
-				else
-						printf(", ");
-		}
+	int i;
+
+	printf("Searching in array: ");
+	for (i = left; i <= right; i++)
+	{
+		printf("%i", array[i]);
+		if (i == right)
+			putchar(10);
+		else
+			printf(", ");
+	}
 }
 
 /**
